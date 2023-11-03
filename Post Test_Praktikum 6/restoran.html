@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pesen aja</title>
+
+	<script>
+		function hitungTotal() {
+			// Mendapatkan nilai input dari pengguna
+			let makanan = document.getElementById("makanan").value;
+			let jumlah = parseInt(document.getElementById("jumlah").value);
+			let voucher = document.getElementById("voucher").value;
+
+			// Mendefinisikan harga makanan
+			let harga = 0;
+			if (makanan === "kelp shake") {
+				harga = 10;
+			} else if (makanan === "kraby patty") {
+				harga = 5;
+			} else if (makanan === "cump") {
+				harga = 50;
+			}
+
+			// Menghitung diskon jika kupon yang dimasukkan benar
+			let diskon = 0;
+			if (voucher === "ASPRAKLEONGANTENG") {
+				diskon = 0.2;
+			}
+
+			// Menghitung total harga
+			let total = harga * jumlah * (1 - diskon);
+
+			// Menampilkan hasil pesanan pada halaman web
+			document.getElementById("hasil").innerText = "makanan yang dipesan : " + makanan +" dengan jumlah : " + jumlah +" total harga $ " + total.toFixed(2);
+		}
+	</script>
+</head>
+<body>
+	<h1>Pesen aja</h1>
+	<p>makanan:
+    <td>
+        <select id="makanan">
+            <option value = "kelp shake"> kelp shake </option> 
+            <option value = "kraby patty"> kraby patty </option> 
+            <option value = "cump"> cump </option> 
+        </select>
+    </td></p>
+	<p>Jumlah: <input type="number" id="jumlah"></p>
+	<p>voucher: <input type="text" id="voucher"></p>
+	<button onclick="hitungTotal()">Pesan</button>
+	<p id="hasil"></p>
+</body>
+</html>
