@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('istockphoto-165102644-170667a.jpg');
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #9a7d09;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.centered-main {
+    max-width: 800px;
+    margin: auto;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.icon {
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.babad-info {
+    display: none;
+}
